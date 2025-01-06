@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Video Trimmer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Video Trimmer</h1>
+        
+        <div class="input-section">
+            <input type="text" id="videoUrl" placeholder="Enter YouTube URL">
+            <button onclick="loadVideo()">Load Video</button>
+        </div>
+
+        <div id="player"></div>
+
+        <div class="controls">
+            <div class="time-controls">
+                <div>
+                    <label>Start Time (seconds):</label>
+                    <input type="number" id="startTime" min="0" value="0">
+                    <button onclick="previewStart()">Preview Start</button>
+                </div>
+                
+                <div>
+                    <label>End Time (seconds):</label>
+                    <input type="number" id="endTime" min="0" value="0">
+                    <button onclick="previewEnd()">Preview End</button>
+                </div>
+            </div>
+            
+            <div class="playback-controls">
+                <button onclick="playSegment()">Play Segment</button>
+                <a id="downloadLink" target="_blank" class="button">
+                    Get Trimmed Video Link
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
